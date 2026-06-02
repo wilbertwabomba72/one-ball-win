@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>One Ball Win</title>
+  <meta name="description" content="One Ball Win is a one-shot ricochet puzzle game for iPhone and iPad.">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #141c20;
+      --muted: #5a6366;
+      --line: #d9e0dc;
+      --paper: #f8faf7;
+      --white: #ffffff;
+      --gold: #ffc435;
+      --teal: #1fbeb0;
+      --pink: #ef476f;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 28px 0 40px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 12px 0 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .brand img {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      box-shadow: 0 10px 24px rgba(20, 28, 32, 0.12);
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+      gap: 44px;
+      align-items: center;
+      padding: 36px 0 52px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 760px;
+      font-size: clamp(3rem, 8vw, 6.7rem);
+      line-height: 0.95;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 650px;
+      margin: 24px 0 0;
+      font-size: clamp(1.12rem, 2.2vw, 1.45rem);
+      line-height: 1.55;
+      color: var(--muted);
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .badge {
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      font-weight: 700;
+    }
+
+    .shot {
+      display: block;
+      width: 100%;
+      border: 8px solid var(--ink);
+      border-radius: 32px;
+      box-shadow: 0 24px 60px rgba(20, 28, 32, 0.16);
+      background: var(--white);
+    }
+
+    .sections {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      padding: 44px 0 16px;
+    }
+
+    section {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+    }
+
+    section:nth-child(1) {
+      border-top: 6px solid var(--gold);
+    }
+
+    section:nth-child(2) {
+      border-top: 6px solid var(--teal);
+    }
+
+    section:nth-child(3) {
+      border-top: 6px solid var(--pink);
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.15rem;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0;
+      line-height: 1.65;
+      color: var(--muted);
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding-top: 28px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      border-top: 1px solid var(--line);
+      margin-top: 28px;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100% - 28px, 680px);
+      }
+
+      header,
+      footer {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav {
+        flex-wrap: wrap;
+      }
+
+      .hero,
+      .sections {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        gap: 28px;
+        padding-top: 28px;
+      }
+
+      .shot {
+        width: min(320px, 100%);
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="brand">
+        <img src="appstore_assets/app_icon_1024.png" alt="One Ball Win app icon">
+        <span>One Ball Win</span>
+      </div>
+      <nav aria-label="Support links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="mailto:support@dataeye.com">Contact</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div>
+        <h1>One Ball Win</h1>
+        <p class="lead">A compact ricochet puzzle game about angles, timing, and the satisfying moment when one perfect bounce clears the board.</p>
+        <div class="badges" aria-label="Game highlights">
+          <span class="badge">50 levels</span>
+          <span class="badge">Offline core</span>
+          <span class="badge">One-touch aim</span>
+          <span class="badge">No account</span>
+        </div>
+      </div>
+      <img class="shot" src="appstore_assets/screenshots/iphone_6_9_1320x2868/01_master_one_ball_puzzles.png" alt="One Ball Win gameplay screenshot">
+    </div>
+
+    <div class="sections">
+      <section>
+        <h2>Simple To Start</h2>
+        <p>Hold and drag to aim, release to launch, then watch the ball rebound through walls, targets, and blockers.</p>
+      </section>
+      <section>
+        <h2>Built For Focus</h2>
+        <p>The clean black-and-white playfield keeps attention on the next angle, the next bounce, and the next clear.</p>
+      </section>
+      <section>
+        <h2>Made For Quick Play</h2>
+        <p>Progress and settings stay on your device. The game works without login or purchases, with ad-supported level results after the early stages.</p>
+      </section>
+    </div>
+
+    <footer>
+      <span>Copyright &copy; 2026 DataEye. All rights reserved.</span>
+      <span>One Ball Win is a single-player puzzle game for iPhone and iPad.</span>
+    </footer>
+  </main>
+</body>
+</html>
